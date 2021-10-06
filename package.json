@@ -1,0 +1,17 @@
+{
+  "name": "personalscroll",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel src/index.html -d build --no-source-maps"
+  },
+  "author": "Celebrer",
+  "license": "ISC",
+  "dependencies": {
+    "fontfaceobserver": "^2.1.0",
+    "gsap": "^3.6.1",
+    "imagesloaded": "^4.1.4"
+  }
+}
