@@ -22,17 +22,17 @@
 }
 
 :root {
-    font-size: 16px;
+    /* font-size: 16px; */
     --color-bg: conic-gradient(from -90deg at 0% 105%, #efefef, #e6dad7);
     --color-text: #313131;
     --color-w: #efefef;
 }
 html {
     height: -webkit-fill-available;
+    font-size: calc(100vw / 1920 * 10);
 }
 
 body {
-    margin: 2rem;
     color: var(--color-text);
     background: var(--color-bg);
     font-family: Telegraf;
@@ -43,7 +43,7 @@ body {
 
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-    min-height: -webkit-fill-available;
+    /* min-height: -webkit-fill-available; */
 }
 ::-webkit-scrollbar {
     display: none;
@@ -69,46 +69,35 @@ body {
 }
 
 h1 {
-    font-size: calc(100% + 4vw);
+    font-size: 8rem;
     font-weight: 400;
     margin: 0;
     font-weight: 300;
 }
 h2 {
-    font-size: calc(100% + 1.5vw);
+    font-size: 4rem;
     font-weight: 400;
     margin: 0;
     margin-bottom: 1rem;
     font-weight: 300;
 }
-h3 {
-    font-size: 3vw;
-    font-size: clamp(1.5rem, 3vw, 3rem);
-    font-weight: 400;
-    margin: 0;
-    margin-bottom: 1rem;
-    font-weight: 500;
-    color: #efefef;
-}
+
 p {
-    font-size: calc(80% + 0.2vw);
+    font-size: 2.5rem;
+    line-height: 3.5rem;
     margin: 0;
     font-weight: 200;
 }
 span {
-    font-size: calc(80% + 0.2vw);
+    font-size: 2rem;
     margin: 0;
     font-weight: 200;
 }
-p,
-span {
-    line-height: 1.5rem;
-}
+
 a {
     color: var(--color-text);
-    font-weight: 100;
-    font-size: 1.2vw;
-    font-size: clamp(0.8rem, 1.2vw, 1rem);
+    font-weight: 500;
+    font-size: 2.5rem;
     text-decoration: none;
     margin-bottom: 3rem;
     border-bottom: 1px solid var(--color-text);
@@ -124,29 +113,31 @@ a:hover {
     margin-top: 1rem;
 }
 
-@media screen and (min-width: 425px) {
+@media screen and (max-width: 769px) {
     h1 {
-        font-size: 4vw;
-        font-size: clamp(2rem, 4vw, 4rem);
+        font-size: 6.5rem;
     }
     h2 {
-        font-size: 3vw;
-        font-size: clamp(1rem, 3vw, 2rem);
-    }
-    h3 {
-        font-size: 3vw;
-        font-size: clamp(1.5rem, 3vw, 3rem);
+        font-size: 4rem;
     }
     p {
-        font-size: 1.5vw;
-        font-size: clamp(1rem, 1.5vw, 1.2rem);
-        line-height: 2vw;
-        line-height: clamp(1.5rem, 2vw, 2rem);
+        font-size: 2.5rem;
     }
     span {
-        font-size: 1.2vw;
-        font-size: clamp(1rem, 1.2vw, 1.2rem);
-        line-height: 1.5rem;
+        font-size: 4.2rem;
+    }
+    button {
+        bottom: 3rem;
+        right: -3.2%;
+    }
+    p,
+    span,
+    a {
+        line-height: 5.5rem;
+    }
+    a {
+        color: var(--color-w);
+        border-bottom: 1px solid var(--color-w);
     }
 }
 
@@ -226,7 +217,7 @@ button {
     }
 }
 .panel__home-img {
-    height: 60%;
+    height: 100%;
     width: 100%;
     overflow: hidden;
     border-radius: 0 0 5rem 5rem;
@@ -241,7 +232,7 @@ button {
 .panel__home-text {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: end;
     padding: 4rem;
 }
 .home-title {
@@ -250,11 +241,9 @@ button {
     /* margin-bottom: 2rem; */
 }
 .home-title h1 {
-    font-size: 10vmin;
-    font-size: clamp(3rem, 10vmin, 10rem);
+    font-size: 8rem;
     margin: 0;
     font-weight: 200;
-    text-align: center;
 }
 .home-title--line {
     display: flex;
@@ -269,12 +258,7 @@ button {
 .home-desc {
     width: 40%;
 }
-.home-desc .ofh .anim-desc {
-    font-size: 2vmin;
-    font-size: clamp(1rem, 2vmin, 3rem);
-    font-weight: 200;
-    line-height: clamp(1rem, 4vmin, 1.5rem);
-}
+
 .home-arrow {
     position: absolute;
     bottom: 2rem;
@@ -307,6 +291,7 @@ button {
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
+    text-align: right;
 }
 .panel__title {
     grid-area: 1 / 3 / 2 / 5;
@@ -390,6 +375,9 @@ button {
         text-align: center;
         padding-right: 0;
     }
+    /* .home-title h1 {
+        font-size: 12rem;
+    } */
     .home-desc,
     .home-arrow {
         display: none;
@@ -397,7 +385,7 @@ button {
     .panel__home-text {
         justify-content: center;
         padding: 2rem;
-        margin-top: 10%;
+        /* margin-top: 10%; */
     }
     .panel-grid {
         gap: 1rem 1.5rem;
@@ -412,6 +400,9 @@ button {
     .home-line {
         width: 3rem;
     }
+    .panel__home-extra {
+        padding: 5rem;
+    }
     /* panel grid */
     .panel-grid {
         display: grid;
@@ -419,7 +410,7 @@ button {
         grid-template-columns: 2fr 2fr;
         grid-template-rows: 0.5fr 1.5fr;
         gap: 1rem 5rem;
-        padding: 2rem;
+        /* padding: 5%; */
     }
     .panel__title {
         grid-area: 1 / 2 / 2 / 3;
@@ -454,7 +445,7 @@ button {
 
     .menu_desc-inner {
         background: var(--color-bg);
-        padding: 10%;
+        padding: 5%;
         height: inherit;
         overflow: inherit;
     }
@@ -501,18 +492,6 @@ button {
 }
 
 @media screen and (max-width: 500px) {
-    button {
-        bottom: 3rem;
-        right: -3.2%;
-    }
-    p,
-    span {
-        line-height: 1.2rem;
-    }
-    a {
-        color: var(--color-w);
-        border-bottom: 1px solid var(--color-w);
-    }
     .panel-grid {
         display: block;
         color: var(--color-w);
