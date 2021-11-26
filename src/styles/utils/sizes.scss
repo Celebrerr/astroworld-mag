@@ -1,0 +1,74 @@
+$font-thunder: 'Telegraf';
+
+%title-big {
+    font-family: $font-thunder;
+    font-size: clamp(4rem, 8vw, 8rem);
+    font-weight: 300;
+}
+
+%title-h1 {
+    font-family: $font-thunder;
+    font-size: clamp(4rem, 3vw, 8rem);
+    font-weight: 300;
+}
+
+%title-h2 {
+    font-family: $font-thunder;
+    font-size: clamp(2rem, 3vw, 4rem);
+
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+%title-h3 {
+    font-family: $font-thunder;
+    font-size: clamp(1.5rem, 3vw, 3rem);
+}
+
+%desc-16 {
+    font-family: $font-thunder;
+    font-size: clamp(1rem, 1.5vw, 1.6rem);
+    font-weight: 200;
+}
+
+%desc-20 {
+    font-family: $font-thunder;
+    font-size: clamp(1.2rem, 2vw, 2rem);
+    font-weight: 200;
+}
+
+%desc-25 {
+    font-family: $font-thunder;
+    font-size: clamp(1.6rem, 2vw, 2.4rem);
+    line-height: clamp(2rem, 2vw, 3rem);
+
+    // line-height: 28.8px;
+    font-weight: 200;
+}
+
+// Fluid Typography
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+    $u1: unit($min-vw);
+    $u2: unit($max-vw);
+    $u3: unit($min-font-size);
+    $u4: unit($max-font-size);
+
+    @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+        & {
+            font-size: $min-font-size;
+            @media screen and (min-width: $min-vw) {
+                font-size: calc(
+                    #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} *
+                        ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+                );
+            }
+            @media screen and (min-width: $max-vw) {
+                font-size: $max-font-size;
+            }
+        }
+    }
+}

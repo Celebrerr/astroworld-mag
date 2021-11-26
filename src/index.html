@@ -31,7 +31,7 @@
     <link rel="preload" href="./font/telegraf-regular.otf" as="font" type="font/otf" crossorigin>
     <link rel="preload" href="./font/telegraf-bold.otf" as="font" type="font/otf" crossorigin>
     <link rel="preload" href="./font/telegraf-light.otf" as="font" type="font/otf" crossorigin>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles/index.scss">
 </head>
 
 <body>
@@ -53,14 +53,14 @@
                 <div class="panel__home-text">
                     <div class="home-title">
                         <div class="home-title--line ofh">
-                            <h1 class="anim-title">AstroWorld </h1>
+                            <h1 class="anim-title">AstroWorld</h1>
                             <div class="home-line anim-circle" style="margin-left: 1rem;"></div>
                         </div>
                         <div class="home-title--line ofh">
                             <div class="home-line anim-circle" style="margin-right: 1rem;"></div>
                             <h1 class="anim-title">Magazine</h1>
                         </div>
-                        <div class="ofh">
+                        <div class="home-parag ofh">
                             <p class="anim-title strong">A collection of superb Mars surface images about HiRISE's
                                 special releases</p>
                         </div>
@@ -97,6 +97,7 @@
             </div>
         </div>
         <div id="app">
+            <!-- Dynamic contaoiner in js -->
         </div>
     </div>
     <script src="./js/main.js"></script>
