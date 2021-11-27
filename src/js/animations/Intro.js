@@ -1,63 +1,66 @@
 import { gsap } from 'gsap';
+import { split } from '../utils/text';
 
 const isMobile = window.matchMedia('(max-width: 500px)');
 
 function animHome() {
-    const ease = 'Power3.easeOut';
+    const easePower = 'Power2.easeInOut';
+    const animExtra = document.querySelectorAll("[data-anim='extra']");
+    const animDesc = document.querySelectorAll("[data-anim='description']");
+
+    animDesc.forEach((el) => {
+        const animDescParagraphs = document;
+
+        const titleSpans = split({
+            element: el,
+        });
+        titleSpans;
+    });
+
+    const test = document.querySelectorAll("[data-anim='description'] > span");
+
     gsap.timeline()
         .addLabel('delay', 0)
         .from(
             '.anim-img',
             {
                 duration: 2.5,
-                y: -500,
-                scale: 4,
-                ease: ease,
+                scale: 2,
+                ease: easePower,
             },
-            'delay+=1.15'
+            'delay+=0.8'
         )
         .from(
             '.anim-title',
             {
                 duration: 2,
                 opacity: 0,
-                y: -500,
-                skewY: -15,
-                ease: ease,
+                y: '100%',
+                ease: easePower,
                 stagger: 0.15,
             },
-            'delay+=1.5'
+            'delay+=0.8'
         )
         .from(
-            '.anim-desc',
-            {
-                duration: 2,
-                opacity: 0,
-                y: -200,
-                skewY: 15,
-                ease: ease,
-                stagger: 0.1,
-            },
-            'delay+=1.5'
-        )
-
-        .from(
-            '.anim-circle',
-            {
-                duration: 2,
-                scale: 0,
-                ease: ease,
-            },
-            'delay+=1.5'
-        )
-        .from(
-            '.anim-extra',
+            animDesc,
             {
                 duration: 1.5,
-                y: 200,
-                ease: ease,
+                opacity: 0,
+                y: '100%',
+                ease: easePower,
+                stagger: 0.05,
             },
-            'delay+=1.5'
+            'delay+=0.8'
+        )
+        .from(
+            animExtra,
+            {
+                duration: 1.5,
+                y: '100%',
+                autoAlpha: 0,
+                ease: easePower,
+            },
+            'delay+=2'
         );
 }
 

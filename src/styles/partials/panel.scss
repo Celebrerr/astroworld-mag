@@ -26,16 +26,11 @@
     left: 0;
     color: #e6dad7;
 }
-.panel__home-extra h2 {
-    transform: rotate(90deg);
-    margin: 3rem 0;
-}
 .extra-circle {
     background: $color-bg;
     border-radius: 100%;
     height: clamp(3rem, 2vw, 7rem);
     width: clamp(3rem, 2vw, 7rem);
-    margin: 0 3rem;
 }
 
 .panel__home-img {
@@ -54,31 +49,30 @@
 .panel__home-text {
     display: flex;
     justify-content: space-between;
-    align-items: end;
+    align-items: center;
     padding: 4rem;
-    .home-title {
+    .home_title {
         text-align: center;
-        padding-right: 10rem;
-        // margin-bottom: 2rem;
         h1 {
             @extend %title-big;
         }
-        .home-parag {
+        .home_parag {
+            margin-top: 4rem;
         }
-        .home-title--line {
+        .home_title--line {
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        .home-line {
+        .home_line {
             position: relative;
-            border-top: 4px solid $color-text;
-            width: 21rem;
+            border-top: 2px solid $color-text;
+            width: 18rem;
         }
     }
 }
 
-.home-desc {
+.home_desc {
     width: 40%;
 }
 
@@ -97,9 +91,8 @@
         transform: translateY(20px);
     }
 }
-.menu_desc {
-    display: none;
-}
+
+//!
 .panel-grid {
     display: grid;
     height: 100%;
@@ -188,14 +181,14 @@
 }
 
 @media screen and (max-width: 1024px) {
-    .home-title {
+    .home_title {
         text-align: center;
         padding-right: 0;
     }
-    /* .home-title h1 {
+    /* .home_title h1 {
         font-size: 12rem;
     } */
-    .home-desc,
+    .home_desc,
     .home-arrow {
         display: none;
     }
@@ -211,8 +204,17 @@
         bottom: 5rem;
         right: 1rem;
     }
-    .home-line {
-        width: 3rem;
+
+    .info-viewmore {
+        color: $color-bg;
+        border-bottom: 1px solid $color-bg;
+    }
+
+    .home_line {
+        width: 8rem !important;
+    }
+    .home_parag {
+        margin-bottom: 2rem;
     }
     .panel__home-extra {
         padding: 5rem;

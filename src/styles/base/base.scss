@@ -5,18 +5,8 @@
 }
 
 html {
-    // font-size: calc(100vw / 1920 * 10);
     font-size: 10px;
 }
-
-// $min_width: 320px;
-// $max_width: 1200px;
-// $min_font: 16px;
-// $max_font: 24px;
-
-// html {
-//     @include fluid-type($min_width, $max_width, $min_font, $max_font);
-// }
 
 body {
     font-family: 'Telegraf';
@@ -37,26 +27,13 @@ body {
     display: none;
 }
 
-// #app {
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100vh;
-// }
-
-#smooth-scroll {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    will-change: transform;
+#app {
+    height: 1px;
 }
 
 #container {
     height: calc(100vh - calc(100vh - 100%));
-    background: var(--color-text);
+    background: $color-text;
 }
 
 img {
@@ -78,7 +55,7 @@ h3 {
 }
 
 p {
-    @extend %desc-25;
+    @extend %desc-20;
 }
 
 a {
@@ -87,7 +64,7 @@ a {
     text-decoration: none;
     outline: none;
     cursor: pointer;
-    margin-bottom: 3rem;
+    // margin-bottom: 3rem;
     border-bottom: 1px solid $color-text;
 
     opacity: 1;
@@ -100,12 +77,12 @@ a:hover {
 }
 
 span {
-    @extend %desc-16;
+    @extend %desc-20;
+    display: inline-flex;
 }
 
 .strong {
     font-weight: 500;
-    margin-top: 1rem;
 }
 
 button {

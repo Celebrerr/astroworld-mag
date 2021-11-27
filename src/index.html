@@ -36,8 +36,8 @@
 
 <body>
     <div id="preloader">
-        <div class="percent ofh">
-            <h1>0%</h1>
+        <div class="preloader_percentage ofh">
+            <h1 data-preloader='stat'>0%</h1>
         </div>
     </div>
     <div id="container">
@@ -51,38 +51,34 @@
                     </picture>
                 </div>
                 <div class="panel__home-text">
-                    <div class="home-title">
-                        <div class="home-title--line ofh">
+                    <div class="home_title">
+                        <div class="home_title--line ofh">
                             <h1 class="anim-title">AstroWorld</h1>
-                            <div class="home-line anim-circle" style="margin-left: 1rem;"></div>
+                            <div class="home_line anim-circle" style="margin-left: 1rem;"></div>
                         </div>
-                        <div class="home-title--line ofh">
-                            <div class="home-line anim-circle" style="margin-right: 1rem;"></div>
+                        <div class="home_title--line ofh">
+                            <div class="home_line anim-circle" style="margin-right: 1rem;"></div>
                             <h1 class="anim-title">Magazine</h1>
                         </div>
-                        <div class="home-parag ofh">
-                            <p class="anim-title strong">A collection of superb Mars surface images about HiRISE's
-                                special releases</p>
+                        <div class="home_parag ofh">
+                            <span class="anim-title strong">A collection of superb Mars surface images about HiRISE's
+                                special releases</span>
                         </div>
                     </div>
-                    <div class="home-desc">
+                    <div class="home_desc">
                         <div class="ofh">
-                            <p class="anim-desc">HiRISE (High Resolution Imaging Science Experiment)</p>
+                            <p data-anim='description'>HiRISE (High Resolution Imaging Science Experiment) is the most
+                                powerful camera ever sent to another planet, one of six instruments onboard the Mars
+                                Reconnaissance Orbiter.</p>
                         </div>
                         <div class="ofh">
-                            <p class="anim-desc">is the most powerful camera ever sent to another planet,</p>
+                            <p style="font-style: italic; margin-top: 5rem;" data-anim='description'>"We launched in
+                                2005, arrived at Mars in 2006 and have been imaging ever since."</p>
                         </div>
                         <div class="ofh">
-                            <p class="anim-desc">one of six instruments onboard the Mars Reconnaissance Orbiter.</p>
-                        </div>
-                        <div class="ofh">
-                            <p class="anim-desc" style="font-style: italic; margin-top: 1rem;">"We launched in 2005,
-                                arrived at Mars in 2006 and have been imaging ever since."</p>
-                        </div>
-                        <div class="ofh">
-                            <p class="anim-desc strong">
-                                <a href="https://www.uahirise.org/epo/about/" target="_blank">Read more about HiRISE's
-                                    team</a>
+                            <p class="strong">
+                                <a href="https://www.uahirise.org/epo/about/" target="_blank"
+                                    data-anim='description'>Read more about HiRISE's team</a>
                             </p>
                         </div>
                         <div class="home-arrow ofh">
@@ -91,8 +87,8 @@
                     </div>
                 </div>
                 <div class="panel__home-extra">
-                    <div class="extra-circle anim-circle"></div>
-                    <h2 class="anim-extra">HiRISE</h2>
+                    <div class="extra-circle" data-anim='extra'></div>
+                    <p data-anim='extra'>HiRISE</p>
                 </div>
             </div>
         </div>

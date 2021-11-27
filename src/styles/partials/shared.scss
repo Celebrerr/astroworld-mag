@@ -8,11 +8,10 @@
     color: $color-bg;
     z-index: 100;
     overflow: hidden;
-}
-
-#preloader .percent {
-    position: absolute;
-    left: 3rem;
-    top: 3rem;
-    font-size: 50px;
+    .preloader_percentage {
+        position: absolute;
+        left: 3rem;
+        top: 3rem;
+        font-size: 50px;
+    }
 }
