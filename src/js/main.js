@@ -77,7 +77,3 @@ window.onbeforeunload = function () {
 window.matchMedia('(max-width: 500px)').addEventListener('change', () => {
     location.reload();
 });
-
-window.addEventListener('resize', () => {
-    console.log('fsada');
-});

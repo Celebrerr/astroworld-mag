@@ -1,7 +1,7 @@
 import { gsap } from 'gsap';
 import { split } from '../utils/text';
 
-const isMobile = window.matchMedia('(max-width: 500px)');
+const isMobile = window.matchMedia('(max-width: 769px)');
 
 function animHome() {
     const easePower = 'Power2.easeInOut';
@@ -68,6 +68,7 @@ function infoReveal() {
     if (isMobile.matches) {
         gsap.utils.toArray('.panel').forEach((panel) => {
             const el = panel.querySelector('.menu_desc');
+            const buttons = panel.querySelector('.button-open');
 
             const tl = gsap.timeline({
                 paused: true,

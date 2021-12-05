@@ -37,7 +37,7 @@ export default function getData() {
                             
                     </div>
                     <div class="open-panel--desc">
-                        <p>Tap anywhere to read more</p>
+                        <button class='button-open'>Tap anywhere to read more</button>
                     </div>
                     <div class="panel__desc">
                         <p>${el.description}</p>

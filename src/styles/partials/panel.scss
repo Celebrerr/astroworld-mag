@@ -2,7 +2,9 @@
     position: relative;
     will-change: transform;
     width: 100%;
-    height: calc(var(--vh, 1vh) * 100);
+    // height: calc(var(--vh, 1vh) * 100);
+    height: 100vh;
+    min-height: 100vh;
     box-sizing: border-box;
     background: $color-bg;
 }
@@ -200,11 +202,6 @@
 }
 
 @media screen and (max-width: 769px) {
-    button {
-        bottom: 5rem;
-        right: 1rem;
-    }
-
     .info-viewmore {
         color: $color-bg;
         border-bottom: 1px solid $color-bg;
@@ -262,6 +259,10 @@
         padding: 5%;
         height: inherit;
         overflow: inherit;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
     .menu--open {
         pointer-events: auto;
@@ -272,20 +273,16 @@
     .panel__desc-info {
         display: flex;
         justify-content: space-between;
+        align-items: flex-start;
         margin-bottom: 2rem;
     }
     .desc-info {
         display: flex;
         flex-direction: column;
     }
-    .desc-close {
-        position: absolute;
-        right: 2.5rem;
-        top: 2.5rem;
-    }
+
     .panel__desc-text {
         overflow-y: scroll;
-        padding: 30% 0;
     }
     .panel__desc-text p {
         margin-bottom: 10%;
@@ -311,6 +308,10 @@
 }
 
 @media screen and (max-width: 500px) {
+    button {
+        bottom: 1rem;
+        left: 2rem;
+    }
     .panel-grid {
         display: block;
         color: $color-bg;
@@ -353,14 +354,9 @@
     }
 }
 
-@media screen and (max-width: 320px) {
-    button {
-        bottom: 3rem;
-        left: 50%;
-        right: 0;
-        transform: translateX(-50%);
-    }
-    .hidden {
-        display: none;
-    }
-}
+// @media screen and (max-width: 320px) {
+//
+//     .hidden {
+//         display: none;
+//     }
+// }
