@@ -1,7 +1,7 @@
 import { gsap } from 'gsap';
 import { split } from '../utils/text';
 
-const isMobile = window.matchMedia('(max-width: 769px)');
+const isMobile = window.matchMedia('(max-width: 768px)');
 
 function animHome() {
     const easePower = 'Power2.easeInOut';

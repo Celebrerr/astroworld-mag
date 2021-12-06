@@ -18,7 +18,8 @@ export default function getData() {
                     <div class="panel__info">
                         <div class="panel__info-text">
                             <h2>${el.label}</h2>
-                            <a href='${el.extra}' target="_blank" class='info-viewmore'> high resolution image &rarr;</a>                      
+                            <a href='${el.extra}' target="_blank" class='info-viewmore link link--marea'> high resolution image 	
+                            &#129125;</a>                      
                         </div>
                         <div class="panel__info-more">
                             <span>Acquisition date:${el.date}</span>
@@ -30,7 +31,6 @@ export default function getData() {
                     </div>
                     <div class="panel__image">
                     <picture>
-                        <source srcset="${el.webimg}" media="(min-width: 769px)" type="image/webp">
                         <source srcset="${el.mobimg}" media="(max-width: 768px)" type="image/jpeg">
                         <img src="${el.img}" alt="${el.title}" class='main-img'>
                     </picture>    
@@ -83,8 +83,9 @@ export default function getData() {
                                     one of six instruments onboard the Mars Reconnaissance Orbiter. Their camera’s high resolution capability remains unprecedented for any existing orbiter in the study of the Red Planet, as well as being an
                                     indispensable instrument for helping to select landing sites for robotic and future human exploration. </p>
 
-                            <p class='mt-2'>Read more about them: <a href="https://www.uahirise.org/epo/about" target="_blank" style="color: #efefef; border-bottom: 1px solid var(--color-w)";>
-                            here
+                            <p class='mt-2'>
+                                <a href="https://www.uahirise.org/epo/about" target="_blank" class="link link--marea" style="color: #efefef;">
+                                Read more about them! 
                         </a></p>         
                         </div>
                     </div>

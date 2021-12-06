@@ -240,11 +240,7 @@ button {
     padding-right: 5rem;
     /* margin-bottom: 2rem; */
 }
-.home-title h1 {
-    font-size: 8rem;
-    margin: 0;
-    font-weight: 200;
-}
+
 .home-title--line {
     display: flex;
     align-items: center;
