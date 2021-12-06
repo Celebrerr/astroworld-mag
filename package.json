@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html --open",
-    "build": "parcel src/index.html -d build --no-source-maps"
+    "build": "parcel src/index.html -d dist --no-source-maps",
+    "build-clean": "npm run clean && npm run build",
+    "clean": "rimraf dist/*"
   },
   "author": "Celebrer",
   "license": "ISC",
@@ -16,6 +18,7 @@
     "lodash": "^4.17.21"
   },
   "devDependencies": {
+    "rimraf": "^3.0.2",
     "sass": "^1.43.5"
   }
 }
