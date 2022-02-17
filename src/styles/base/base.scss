@@ -127,11 +127,19 @@ button {
     border: none;
 
     position: absolute;
-    bottom: 5rem;
-    left: 3rem;
+    bottom: 6rem;
+    left: 4rem;
 
-    background: #313131a6;
-    color: $color-bg;
+    font-weight: bold;
+    background: $color-bg;
+    color: $color-text;
     padding: 0.8rem 1.5rem;
     border-radius: 1rem;
+}
+
+@media screen and (max-width: 500px) {
+    button {
+        bottom: 2rem;
+        left: 2rem;
+    }
 }

@@ -19,7 +19,7 @@
 .panel__home-extra {
     display: flex;
     width: 100%;
-    padding: 2rem;
+    padding: 4rem;
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
@@ -79,6 +79,7 @@
     width: 40%;
     display: flex;
     flex-direction: column;
+    text-align: right;
     p {
         margin-bottom: 2rem;
     }
@@ -319,10 +320,6 @@
 }
 
 @media screen and (max-width: 500px) {
-    button {
-        bottom: 2rem;
-        left: 2rem;
-    }
     .panel-grid {
         display: flex;
         flex-direction: column;
